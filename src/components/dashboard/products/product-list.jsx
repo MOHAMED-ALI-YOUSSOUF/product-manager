@@ -1,9 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { Table } from "react-bootstrap";
-import {FaEdit} from "react-icons/fa"
-import BtnDeleteProduct from "./btn-delete-product";
+import ProductRow from "./productRow";
 
 const itemList = ({ product }) => {
   if (!product) {
@@ -22,28 +19,8 @@ const itemList = ({ product }) => {
         </tr>
       </thead>
       <tbody>
-        {product.map((item) => (
-          <tr key={item.id}>
-            <td>{item.id}</td>
-            <td>{item.title}</td>
-            <td>{item.category}</td>
-            <td>{item.price}</td>
-            <td>
-              <Image
-                src={item.image}
-                width={50}
-                height={50}
-                alt={item.title}
-              />
-            </td>
-            <td>
-            <Link href={`/dashboard/products/${item.id}`}>
-                <FaEdit />
-              </Link>
-              <span className="ms-3">
-              <BtnDeleteProduct /></span>
-            </td>
-          </tr>
+        {product.map((item, index) => (
+          <ProductRow {...item} seq={index + 1} />
         ))}
       </tbody>
     </Table>

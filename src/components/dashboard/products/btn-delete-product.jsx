@@ -8,6 +8,9 @@ const BtnDeleteProduct = ({ productId }) => {
   const router = useRouter();
 
   const handleDelete = async () => {
+    const resp = confirm("Are you sure to delete")
+
+    if(!resp) return
   
   };
 

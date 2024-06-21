@@ -25,7 +25,6 @@ const ProductItem = ({ id, title, image, price, description }) => {
 
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Text>{description}</Card.Text>
         {/* <Badge variant="warning">{price}</Badge> */}
       </Card.Body>
       <Card.Footer>

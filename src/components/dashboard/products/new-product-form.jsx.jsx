@@ -4,12 +4,12 @@ import SubmitButton from "@/components/common/form-controls/submit-button";
 import React from "react";
 import { Form } from "react-bootstrap";
 
-const EditProductForm = ({ product }) => {
+const NewProductForm = ({ product }) => {
   return (
     <Form>
       <Form.Group className="mb-3">
         <Form.Label>Title</Form.Label>
-        <Form.Control name="title" type="text" defaultValue={product.title} />
+        <Form.Control name="title" type="text"  />
         <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
       </Form.Group>
       <Form.Group className="mb-3">
@@ -17,20 +17,21 @@ const EditProductForm = ({ product }) => {
         <Form.Control
           name="description"
           as="textarea"
-          defaultValue={product.description}
+         
           rows={3}
         />
         <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
       </Form.Group>
       <Form.Group className="mb-3">
         <Form.Label>Price</Form.Label>
-        <Form.Control name="price" type="number" defaultValue={product.price} />
+        <Form.Control name="price" type="number"  />
         <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
       </Form.Group>
       <Form.Group className="mb-3">
         <Form.Label>Category</Form.Label>
-        <Form.Select name="category" defaultValue={product.category}>
-          <option value={product.category}>{product.category}</option>
+        <Form.Select name="category" >
+         
+          <option value="">Select</option>
           <option value="Home">Home</option>
           <option value="Computers">Computers</option>
           <option value="Clothing">Clothing</option>
@@ -44,10 +45,10 @@ const EditProductForm = ({ product }) => {
         <Form.Control name="image" type="file" />
         <Form.Control.Feedback type="invalid"></Form.Control.Feedback>
       </Form.Group>
-      <SubmitButton title="Update" />
+      <SubmitButton title="Create" />
       <CancelButton />
     </Form>
   );
 };
 
-export default EditProductForm;
+export default NewProductForm;
