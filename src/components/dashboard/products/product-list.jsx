@@ -20,7 +20,7 @@ const itemList = ({ product }) => {
       </thead>
       <tbody>
         {product.map((item, index) => (
-          <ProductRow {...item} seq={index + 1} />
+          <ProductRow key={item.id} {...item} seq={index + 1} />
         ))}
       </tbody>
     </Table>

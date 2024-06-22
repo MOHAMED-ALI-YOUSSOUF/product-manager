@@ -1,5 +1,7 @@
+import ProductHeader from "@/components/dashboard/products/product-header";
 import ProductList from "@/components/dashboard/products/product-list";
 import { config } from "@/utils/config";
+import Link from "next/link";
 import React from "react";
 
 const DashboardProductsPage = async () => {
@@ -8,6 +10,7 @@ const DashboardProductsPage = async () => {
 
   return (
     <div>
+         <ProductHeader/>
       <ProductList product={product} />
     </div>
   );

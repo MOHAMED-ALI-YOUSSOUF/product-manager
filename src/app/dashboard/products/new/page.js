@@ -1,12 +1,13 @@
 import NewProductForm from '@/components/dashboard/products/new-product-form.jsx'
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
-const NewProductPAge = () => {
+const NewProductPage = () => {
   return (
-    <div>
+    <Container>
     <NewProductForm/>
-    </div>
+    </Container>
   )
 }
 
-export default NewProductPAge
+export default NewProductPage

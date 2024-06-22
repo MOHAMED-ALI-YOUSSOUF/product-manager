@@ -7,6 +7,7 @@ import { Form } from "react-bootstrap";
 const EditProductForm = ({ product }) => {
   return (
     <Form>
+      <input type="hidden" name="id" defaultValue={id}/>
       <Form.Group className="mb-3">
         <Form.Label>Title</Form.Label>
         <Form.Control name="title" type="text" defaultValue={product.title} />
